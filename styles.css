@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --primary-color: rgb(255, 0, 55);
+}
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -10,7 +13,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: green;
+  background-color: var(--primary-color);
   padding: 15px;
   display: flex;
   align-items: center;
@@ -43,7 +46,7 @@ input[type="text"] {
   border: 1px solid #c7c7c7;
 }
 input[type="text"]:focus {
-  border: 1px solid green;
+  border: 1px solid var(--primary-color);
 }
 input[type="submit"] {
   padding: 10px;
@@ -54,7 +57,7 @@ input[type="submit"] {
 }
 input[type="submit"]:hover {
   color: #fff;
-  background-color: green;
+  background-color: var(--primary-color);
   cursor: pointer;
 }
 
@@ -73,9 +76,10 @@ ul > li {
   cursor: pointer;
 }
 ul > li:nth-child(odd) {
-  background-color: rgb(168, 240, 168);
+  background-color: var(--primary-color);
   border-bottom: 1px solid #c7c7c7;
   padding: 15px;
+  color: #fff;
 }
 ul > li:hover {
   opacity: 0.1;
@@ -90,7 +94,7 @@ ul > li:hover {
   margin: 10px 0;
 }
 footer {
-  background-color: green;
+  background-color: var(--primary-color);
   position: fixed;
   bottom: 0;
   width: 100%;
