@@ -15,7 +15,12 @@ document.addEventListener("DOMContentLoaded", function () {
     for (const storedItem of storedLists) {
       const li = document.createElement("li");
       li.textContent = storedItem;
-      ul.appendChild(li);
+      if (ul.firstElementChild) {
+        ul.firstChild.before(li);
+      } else {
+        ul.appendChild(li);
+      }
+
       li.addEventListener("click", handleLiClick);
     }
   }
@@ -44,7 +49,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const li = document.createElement("li");
     li.textContent = input.value;
-    ul.appendChild(li);
+    if (ul.firstElementChild) {
+      ul.firstChild.before(li);
+    } else {
+      ul.appendChild(li);
+    }
+
     input.value = "";
 
     li.addEventListener("click", handleLiClick);
